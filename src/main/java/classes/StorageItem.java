@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public enum StorageItem {
 
     TOOTHBRUSH("зубная щетка"),
@@ -8,9 +10,13 @@ public enum StorageItem {
     NAILS("два старых гвоздя"),
     COPPERWIRE("кусок медной проволоки");
 
-    final String name;
+    private final String name;
+
     StorageItem(String name) {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 }
