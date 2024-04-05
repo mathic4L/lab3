@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.Objects;
 
 public class Room {
@@ -10,6 +12,7 @@ public class Room {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -29,7 +32,7 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "classes.Room{" +
                 "name='" + name + '\'' +
                 '}';
     }
