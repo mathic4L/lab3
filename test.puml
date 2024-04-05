@@ -1,0 +1,112 @@
+@startuml
+class classes.Room {
+- String name
++ String getName()
++ void setName(String)
++ boolean equals(Object)
++ int hashCode()
++ String toString()
+}
+
+
+class classes.Crabs {
++ String getName()
++ String getThankedName()
++ void comeBack()
++ boolean equals(Object)
+}
+
+abstract class classes.Emotion {
++ {abstract}String express()
+}
+
+class classes.Cylinder {
++ String getType()
++ String toString()
++ int hashCode()
++ boolean equals(Object)
+}
+
+class classes.Scooperfield {
++ String getName()
++ void lookAround(String)
++ void thank(Thankable)
++ void expressEmotion(Emotion)
++ void goToRoom(Room)
++ void comeBack()
++ void takeOff(Headdress)
++ void takeOut(StorageItem[])
++ boolean equals(Object)
+}
+
+class Main {
++ {static} void main(String[])
+}
+
+interface interfaces.HeaddressOwner {
+~ void takeOff(Headdress)
+}
+
+interface interfaces.Thankable {
+~ String getThankedName()
+}
+
+enum classes.StorageItem {
++  TOOTHBRUSH
++  TOOTHPASTE
++  TOWEL
++  HANDKERCHIEF
++  SOCKS
++  NAILS
++  COPPERWIRE
+- String name
++ String getName()
+}
+
+
+abstract class classes.Person {
++ {abstract}String getName()
++ boolean equals(Object)
++ String toString()
++ int hashCode()
+}
+
+class classes.Smile {
++ String express()
++ String toString()
++ int hashCode()
++ boolean equals(Object)
+}
+
+interface interfaces.Headdress {
+~ String getType()
+}
+
+class classes.SmileDisgust {
++ String express()
++ String toString()
++ int hashCode()
++ boolean equals(Object)
+}
+
+interface interfaces.StorageOwner {
+~ void takeOut(StorageItem[])
+}
+
+interface interfaces.HotelRoomRenter {
+~ void comeBack()
+}
+
+
+
+interfaces.Thankable <|.. classes.Crabs
+interfaces.HotelRoomRenter <|.. classes.Crabs
+classes.Person <|-- classes.Crabs
+interfaces.Headdress <|.. classes.Cylinder
+classes.HotelRoomRenter <|.. classes.Scooperfield
+classes.StorageOwner <|.. classes.Scooperfield
+classes.HeaddressOwner <|.. classes.Scooperfield
+classes.Person <|-- classes.Scooperfield
+classes.Emotion <|-- classes.Smile
+classes.Smile <|-- classes.SmileDisgust
+@enduml

@@ -1,13 +1,6 @@
-//public interface HeaddressOwner {
-//    default void takeOff(Person owner, Headdress headdress) {
-//        headdress.takeOff(owner);
-//    };
-//    default void putOn(Person owner, Headdress headdress) {
-//        headdress.takeOff(owner);
-//    };
-//}
+package interfaces;
 
 public interface HeaddressOwner {
-    void takeOff();
-    void putOn();
+    void takeOff(Headdress headdress);
+
 }

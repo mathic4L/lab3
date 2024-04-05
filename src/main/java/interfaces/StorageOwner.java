@@ -1,11 +1,7 @@
-//public interface StorageOwner {
-//    void putIn(StorageItem storageItem);
-//    void takeOut(StorageItem storageItem);
-//
-//}
+package interfaces;
+
+import classes.StorageItem;
 
 public interface StorageOwner {
-    void putIn(StorageItem[] storageItems);
     void takeOut(StorageItem[] storageItems);
-
 }
